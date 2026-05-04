@@ -9,28 +9,57 @@ const About = () => {
     <div className="container page-container">
       <h1>About Angampora</h1>
       
-      <section className="card" style={{ marginBottom: '2rem' }}>
-        <h2>Introduction</h2>
+      <section id="about-us" className="card" style={{ marginBottom: '2rem' }}>
+        <h2>About Us</h2>
         <p>
           Angampora is a traditional Sri Lankan martial art that combines combat techniques, self-defense, sport, exercise, and meditation. 
           It focuses heavily on discipline and spiritual development alongside physical prowess.
         </p>
+
+        {/* Mission */}
+        <div style={{ borderLeft: '4px solid var(--primary)', paddingLeft: '1rem', margin: '1.5rem 0' }}>
+          <h3 style={{ marginTop: 0 }}>Our Mission</h3>
+          <p style={{ fontSize: '1.05rem', fontStyle: 'italic', color: 'var(--text-main)', margin: 0 }}>
+            Reviving Angampora from its royal origins into a living, community-centered landscape practice.
+          </p>
+        </div>
+
       </section>
 
-      <section className="card" style={{ marginBottom: '2rem' }}>
-        <h2>History</h2>
-        
-        <h4 style={{ color: 'var(--text-main)', marginTop: '1rem' }}>Mythical Era</h4>
-        <p>The origins of Angampora trace back over 33,000 years, according to legend. It is deeply entwined with the history of the legendary King Ravana, who was considered a master of this ancient art.</p>
+      <section id="history" className="card" style={{ marginBottom: '2rem' }}>
+        <h2>The Origin, Myths, Legends, and Historical Development of Angampora</h2>
+        <p style={{ color: 'var(--text-muted)', fontStyle: 'italic', marginBottom: '1.5rem' }}>
+          Sri Lanka, though a small island in the Indian Ocean, holds a deep and layered history of culture, belief systems, and indigenous knowledge. Among its most unique heritage practices is Angampora, a traditional martial art that blends combat science, spirituality, and cultural identity.
+        </p>
 
-        <h4 style={{ color: 'var(--text-main)' }}>Ancient Period</h4>
-        <p>Throughout Sri Lanka&apos;s history, Angampora was an essential tool for warfare and the protection of the royal crown. Elite warrior clans practiced the art to defend the island.</p>
+        <h4 style={{ color: 'var(--primary)', marginTop: '1.5rem' }}>Mythological Origins</h4>
+        <p>Angampora is strongly connected to Sri Lankan myth and Hindu epics, especially the legend of King Ravana. Ravana is described as a powerful warrior king, healer, and master of advanced combat systems. In many traditional beliefs, Angampora is considered one of his ancient warrior skills.</p>
+        <p>Over time, Ravana became a symbolic figure linking mythology with indigenous martial traditions, especially in contemporary cultural interpretations.</p>
 
-        <h4 style={{ color: 'var(--text-main)' }}>Colonial Period</h4>
-        <p>The practice suffered a severe decline during the British colonial era. In 1818, following the Uva-Wellassa uprising, Angampora was banned by the British administration, forcing masters to practice in secret to keep the traditions alive.</p>
+        <h4 style={{ color: 'var(--primary)' }}>Early Historical Background</h4>
+        <p>Although myth shapes its identity, historical texts such as the Mahavamsa suggest that Sri Lanka had organized warrior systems from as early as the 2nd century BCE. Kings like Dutugemunu are recorded as leading powerful armies supported by highly skilled fighters trained in indigenous combat practices.</p>
+        <p>These warriors were not only soldiers but also protectors of kingdoms, trained in both armed and unarmed combat techniques.</p>
 
-        <h4 style={{ color: 'var(--text-main)' }}>Modern Revival</h4>
-        <p>Post-independence, Angampora has seen a resurgence. Today, it is revered as a national heritage and actively taught to preserve the traditional combat techniques and philosophy.</p>
+        <h4 style={{ color: 'var(--primary)' }}>Development Through Kingdoms</h4>
+        <p>Angampora developed significantly during the Anuradhapura, Polonnaruwa, Kotte, and Kandyan periods. By the Kandyan era, it had become a structured martial system, practiced in royal courts and specialized training schools (gurukulas).</p>
+        <p>Two major schools emerged:</p>
+        <ul style={{ color: 'var(--text-main)', lineHeight: '2', paddingLeft: '1.5rem' }}>
+          <li><strong>Maruwalliya</strong> tradition</li>
+          <li><strong>Sudhaliya</strong> tradition</li>
+        </ul>
+        <p>These schools trained warriors in techniques such as wrestling, sword fighting, stick combat, and pressure point attacks.</p>
+
+        <h4 style={{ color: 'var(--primary)' }}>Colonial Suppression</h4>
+        <p>With the arrival of the Portuguese, Dutch, and later British colonial powers, Angampora faced severe decline. The British government officially banned the practice in the 19th century, and practitioners were harshly punished. Training schools were destroyed, and public practice disappeared.</p>
+        <p>As a result, Angampora survived only in secret family lineages and rural traditions, passed down orally from master to student.</p>
+
+        <h4 style={{ color: 'var(--primary)' }}>Survival and Transformation</h4>
+        <p>Even under suppression, the art survived by adapting. Some techniques were hidden within traditional Sri Lankan dance forms, allowing movement patterns and combat sequences to be preserved.</p>
+        <p>Over time, Angampora also absorbed influences from South Indian martial arts such as Kalaripayattu and Silambam, as well as later Asian systems like karate and kung fu.</p>
+
+        <h4 style={{ color: 'var(--primary)' }}>Modern Revival</h4>
+        <p>Today, Angampora is experiencing a cultural revival in Sri Lanka. It is practiced as both a heritage martial art and a performative tradition, symbolizing discipline, identity, and ancient knowledge systems.</p>
+        <p style={{ margin: 0 }}>It is increasingly recognized as an important part of Sri Lanka&apos;s intangible cultural heritage.</p>
       </section>
 
       <section className="card" style={{ marginBottom: '2rem' }}>

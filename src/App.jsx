@@ -3,8 +3,9 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
+import Training from './pages/Training';
 import ScheduleBooking from './pages/ScheduleBooking';
-import CancelBooking from './pages/CancelBooking';
+import Contact from './pages/Contact';
 import { initMockDb } from './lib/mockDb';
 
 function App() {
@@ -19,8 +20,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/training" element={<Training />} />
             <Route path="/book" element={<ScheduleBooking />} />
-            <Route path="/cancel" element={<CancelBooking />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
         <Footer />

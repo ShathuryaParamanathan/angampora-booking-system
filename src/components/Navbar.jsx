@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 
 const Navbar = () => {
@@ -8,22 +8,39 @@ const Navbar = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav style={{ backgroundColor: 'var(--surface)', padding: '1rem', borderBottom: '1px solid var(--border)' }}>
+    <nav style={{ backgroundColor: '#e2cebc', padding: '1rem 0', borderBottom: '1px solid var(--border)', position: 'sticky', top: 0, zIndex: 1000 }}>
       <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <Link to="/" style={{ color: 'var(--primary)', fontWeight: 'bold', fontSize: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-          🥋 Angampora
+        
+         <img
+          src="/src/assets/images/logo.png"
+          alt="Angampora Logo"
+          style={{ width: '50px', height: 'auto', marginRight: '0.5rem' }}
+        /> 
+        Angampora
         </Link>
         
         {/* Desktop Menu */}
-        <div style={{ display: 'none', gap: '2rem' }} className="desktop-menu">
-          <Link to="/" style={{ color: 'var(--text-main)', fontWeight: 500 }}>Home</Link>
-          <Link to="/about" style={{ color: 'var(--text-main)', fontWeight: 500 }}>About Us</Link>
-          <Link to="/book" style={{ color: 'var(--text-main)', fontWeight: 500 }}>Book Session</Link>
-          <Link to="/cancel" style={{ color: 'var(--text-main)', fontWeight: 500 }}>Cancel Booking</Link>
+        <div style={{ display: 'none', gap: '2rem', alignItems: 'center' }} className="desktop-menu">
+          <Link to="/" className="nav-link">Home</Link>
+          
+          <div className="dropdown">
+            <Link to="/about" className="nav-link dropdown-toggle" style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
+              About <ChevronDown size={16} />
+            </Link>
+            <div className="dropdown-menu">
+              <Link to="/about#about-us" className="dropdown-item">About Us</Link>
+              <Link to="/about#history" className="dropdown-item">History</Link>
+            </div>
+          </div>
+
+          <Link to="/training" className="nav-link">Training</Link>
+          <Link to="/book" className="nav-link">Booking</Link>
+          <Link to="/contact" className="nav-link">Contact Us</Link>
         </div>
 
         {/* Mobile Menu Button */}
-        <button onClick={toggleMenu} style={{ background: 'none', color: 'var(--text-main)', display: 'block' }} className="mobile-btn">
+        <button onClick={toggleMenu} style={{ background: 'none', color: 'var(--text-main)', display: 'block', padding: '0.5rem' }} className="mobile-btn">
           {isOpen ? <X /> : <Menu />}
         </button>
       </div>
@@ -32,16 +49,28 @@ const Navbar = () => {
       {isOpen && (
         <div style={{ padding: '1rem', backgroundColor: 'var(--surface)', borderTop: '1px solid var(--border)' }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            <Link to="/" onClick={toggleMenu} style={{ color: 'var(--text-main)', fontWeight: 500 }}>Home</Link>
-            <Link to="/about" onClick={toggleMenu} style={{ color: 'var(--text-main)', fontWeight: 500 }}>About Us</Link>
-            <Link to="/book" onClick={toggleMenu} style={{ color: 'var(--text-main)', fontWeight: 500 }}>Book Session</Link>
-            <Link to="/cancel" onClick={toggleMenu} style={{ color: 'var(--text-main)', fontWeight: 500 }}>Cancel Booking</Link>
+            <Link to="/" onClick={toggleMenu} className="nav-link">Home</Link>
+            <Link to="/about" onClick={toggleMenu} className="nav-link">About Us</Link>
+            <Link to="/about#history" onClick={toggleMenu} className="nav-link" style={{ paddingLeft: '1rem' }}>- History</Link>
+            <Link to="/training" onClick={toggleMenu} className="nav-link">Training</Link>
+            <Link to="/book" onClick={toggleMenu} className="nav-link">Booking</Link>
+            <Link to="/contact" onClick={toggleMenu} className="nav-link">Contact Us</Link>
           </div>
         </div>
       )}
 
-      {/* Basic inline CSS to handle responsive display */}
+      {/* Navbar specific styles */}
       <style>{`
+        .nav-link {
+          color: var(--text-main);
+          fontWeight: 500;
+          transition: color 0.3s;
+          padding: 0.5rem 0;
+        }
+        .nav-link:hover {
+          color: var(--primary);
+        }
+        
         @media (min-width: 768px) {
           .desktop-menu {
             display: flex !important;
@@ -49,6 +78,38 @@ const Navbar = () => {
           .mobile-btn {
             display: none !important;
           }
+        }
+
+        /* Dropdown Logic */
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+        .dropdown-menu {
+          display: none;
+          position: absolute;
+          background-color: var(--surface);
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+          z-index: 1;
+          border: 1px solid var(--border);
+          border-radius: 4px;
+          top: 100%;
+          left: 0;
+        }
+        .dropdown-item {
+          color: var(--text-main);
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          transition: background-color 0.2s;
+        }
+        .dropdown-item:hover {
+          background-color: var(--secondary);
+          color: var(--primary);
+        }
+        .dropdown:hover .dropdown-menu {
+          display: block;
         }
       `}</style>
     </nav>
