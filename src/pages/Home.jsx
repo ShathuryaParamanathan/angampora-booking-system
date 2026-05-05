@@ -82,16 +82,16 @@ const Home = () => {
           <h2 style={{ color: 'var(--text-main)', marginBottom: '1rem' }}>Our Training Programs</h2>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem' }}>
             <div style={{ flex: 1, minWidth: '200px' }}>
-              <h4 style={{ color: 'var(--primary)' }}>🥋 Beginner Angampora</h4>
-              <p style={{ margin: 0 }}>Learn fundamental stances, basic strikes, and defensive moves. Ideal for those starting their journey.</p>
+              <h4 style={{ color: 'var(--primary)' }}>🥋 Angam</h4>
+              <p style={{ margin: 0 }}>Unarmed combat utilizing parts of the human body, such as gataputtu (locks and grips) and pora haramba (strikes and blocks).</p>
             </div>
             <div style={{ flex: 1, minWidth: '200px' }}>
-              <h4 style={{ color: 'var(--primary)' }}>⚔️ Advanced Combat</h4>
-              <p style={{ margin: 0 }}>Complex combination strikes, pressure point attacks, and advanced grappling for experienced practitioners.</p>
+              <h4 style={{ color: 'var(--primary)' }}>⚔️ Illangam</h4>
+              <p style={{ margin: 0 }}>Using various types of arms and weaponry, comprising spears, swords, and sticks.</p>
             </div>
             <div style={{ flex: 1, minWidth: '200px' }}>
-              <h4 style={{ color: 'var(--primary)' }}>🗡️ Traditional Weapons</h4>
-              <p style={{ margin: 0 }}>Master the staff (Leewariya) and the flexible sword (Ethunu Kaduwa) — the art of ancient Sri Lankan weaponry.</p>
+              <h4 style={{ color: 'var(--primary)' }}>🗡️ Maya Angam</h4>
+              <p style={{ margin: 0 }}>Its most unique feature is the use of spells and incantations or spiritual power as a fighting technique.</p>
             </div>
           </div>
         </div>
@@ -99,27 +99,64 @@ const Home = () => {
         <div style={{ marginTop: '4rem' }}>
           <h2 style={{ textAlign: 'center', marginBottom: '2rem' }}>What Our Students Say</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
-            <div className="card" style={{ fontStyle: 'italic' }}>
-              <p>"Angampora has changed my life. The discipline and strength I've gained are beyond words. The masters are truly inspiring."</p>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginTop: '1rem', fontStyle: 'normal', fontWeight: 'bold' }}>
-                <div style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'var(--secondary)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>JD</div>
-                <span>Janith Dhananjaya</span>
+
+            {/* Review 1 */}
+            <div className="card" style={{ padding: 0, overflow: 'hidden', fontStyle: 'italic' }}>
+              <div style={{ width: '100%', height: '200px', backgroundColor: '#e0d5c1', overflow: 'hidden' }}>
+                <img
+                  src="/images/outdoor1.jpeg"
+                  alt="Janith's experience"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  onError={(e) => { e.target.style.display = 'none'; e.target.parentElement.style.display = 'flex'; e.target.parentElement.style.alignItems = 'center'; e.target.parentElement.style.justifyContent = 'center'; e.target.parentElement.innerHTML = '<span style="color:var(--text-muted);font-size:0.85rem">[ review image 1 ]</span>'; }}
+                />
+              </div>
+              <div style={{ padding: '1.5rem' }}>
+                <p style={{ margin: '0 0 1rem 0' }}>"Angampora has changed my life. The discipline and strength I've gained are beyond words. The masters are truly inspiring."</p>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontStyle: 'normal', fontWeight: 'bold' }}>
+                  <div style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'var(--secondary)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>JD</div>
+                  <span>Janith Dhananjaya</span>
+                </div>
               </div>
             </div>
-            <div className="card" style={{ fontStyle: 'italic' }}>
-              <p>"A beautiful way to connect with our heritage. The training is intense but rewarding. Highly recommend the morning sessions."</p>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginTop: '1rem', fontStyle: 'normal', fontWeight: 'bold' }}>
-                <div style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'var(--secondary)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>SK</div>
-                <span>Sajith Kumara</span>
+
+            {/* Review 2 */}
+            <div className="card" style={{ padding: 0, overflow: 'hidden', fontStyle: 'italic' }}>
+              <div style={{ width: '100%', height: '200px', backgroundColor: '#e0d5c1', overflow: 'hidden' }}>
+                <img
+                  src="/images/outdoor2.jpeg"
+                  alt="Sajith's experience"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  onError={(e) => { e.target.style.display = 'none'; e.target.parentElement.style.display = 'flex'; e.target.parentElement.style.alignItems = 'center'; e.target.parentElement.style.justifyContent = 'center'; e.target.parentElement.innerHTML = '<span style="color:var(--text-muted);font-size:0.85rem">[ review image 2 ]</span>'; }}
+                />
+              </div>
+              <div style={{ padding: '1.5rem' }}>
+                <p style={{ margin: '0 0 1rem 0' }}>"A beautiful way to connect with our heritage. The training is intense but rewarding. Highly recommend the morning sessions."</p>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontStyle: 'normal', fontWeight: 'bold' }}>
+                  <div style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'var(--secondary)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>SK</div>
+                  <span>Sajith Kumara</span>
+                </div>
               </div>
             </div>
-            <div className="card" style={{ fontStyle: 'italic' }}>
-              <p>"The weapons training is fascinating. It's not just about fighting; it's about history and culture. A must-try experience."</p>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginTop: '1rem', fontStyle: 'normal', fontWeight: 'bold' }}>
-                <div style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'var(--secondary)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>PR</div>
-                <span>Priyantha Rathnayake</span>
+
+            {/* Review 3 */}
+            <div className="card" style={{ padding: 0, overflow: 'hidden', fontStyle: 'italic' }}>
+              <div style={{ width: '100%', height: '200px', backgroundColor: '#e0d5c1', overflow: 'hidden' }}>
+                <img
+                  src="/images/outdoor3.jpeg"
+                  alt="Priyantha's experience"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  onError={(e) => { e.target.style.display = 'none'; e.target.parentElement.style.display = 'flex'; e.target.parentElement.style.alignItems = 'center'; e.target.parentElement.style.justifyContent = 'center'; e.target.parentElement.innerHTML = '<span style="color:var(--text-muted);font-size:0.85rem">[ review image 3 ]</span>'; }}
+                />
+              </div>
+              <div style={{ padding: '1.5rem' }}>
+                <p style={{ margin: '0 0 1rem 0' }}>"The weapons training is fascinating. It's not just about fighting; it's about history and culture. A must-try experience."</p>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontStyle: 'normal', fontWeight: 'bold' }}>
+                  <div style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'var(--secondary)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>PR</div>
+                  <span>Priyantha Rathnayake</span>
+                </div>
               </div>
             </div>
+
           </div>
 
           <div className="card" style={{ marginTop: '3rem', maxWidth: '600px', margin: '3rem auto 0 auto' }}>

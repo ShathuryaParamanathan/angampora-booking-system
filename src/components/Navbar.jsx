@@ -24,15 +24,7 @@ const Navbar = () => {
         <div style={{ display: 'none', gap: '2rem', alignItems: 'center' }} className="desktop-menu">
           <Link to="/" className="nav-link">Home</Link>
           
-          <div className="dropdown">
-            <Link to="/about" className="nav-link dropdown-toggle" style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
-              About <ChevronDown size={16} />
-            </Link>
-            <div className="dropdown-menu">
-              <Link to="/about#about-us" className="dropdown-item">About Us</Link>
-              <Link to="/about#history" className="dropdown-item">History</Link>
-            </div>
-          </div>
+          <Link to="/about" className="nav-link">About</Link>
 
           <Link to="/training" className="nav-link">Training</Link>
           <Link to="/book" className="nav-link">Booking</Link>
@@ -50,8 +42,7 @@ const Navbar = () => {
         <div style={{ padding: '1rem', backgroundColor: 'var(--surface)', borderTop: '1px solid var(--border)' }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             <Link to="/" onClick={toggleMenu} className="nav-link">Home</Link>
-            <Link to="/about" onClick={toggleMenu} className="nav-link">About Us</Link>
-            <Link to="/about#history" onClick={toggleMenu} className="nav-link" style={{ paddingLeft: '1rem' }}>- History</Link>
+            <Link to="/about" onClick={toggleMenu} className="nav-link">About</Link>
             <Link to="/training" onClick={toggleMenu} className="nav-link">Training</Link>
             <Link to="/book" onClick={toggleMenu} className="nav-link">Booking</Link>
             <Link to="/contact" onClick={toggleMenu} className="nav-link">Contact Us</Link>

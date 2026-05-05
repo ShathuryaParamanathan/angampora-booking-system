@@ -1,13 +1,32 @@
-const masters = [
-  { name: 'Master Karunapala', position: 'Head Guru', year: '1995–Present', location: 'Kandy' },
-  { name: 'Guru Senanayake', position: 'Senior Instructor', year: '2005–Present', location: 'Anuradhapura' },
-  { name: 'Master Perera', position: 'Weapons Specialist', year: '2012–Present', location: 'Colombo' },
-];
+
 
 const About = () => {
   return (
-    <div className="container page-container">
-      <h1>About Angampora</h1>
+    <div>
+
+      {/* Hero Banner */}
+      <div style={{
+        width: '100%',
+        height: '100vh',
+        backgroundImage: 'linear-gradient(rgba(30, 20, 10, 0.55), rgba(20, 15, 5, 0.70)), url("/images/about-bg.jpeg")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        textAlign: 'center',
+      }}>
+        <div>
+          <h1 style={{ color: 'var(--secondary)', fontSize: '3rem', margin: '0 0 1rem 0' }}>About Angampora</h1>
+          <p style={{ color: 'white', fontSize: '1.1rem', maxWidth: '600px', margin: '0 auto', opacity: 0.9 }}>
+            A living heritage — blending combat, spirituality, and Sri Lankan identity.
+          </p>
+        </div>
+      </div>
+
+      <div className="container page-container">
+      {/* <h1>About Angampora</h1> */}
       
       <section id="about-us" className="card" style={{ marginBottom: '2rem' }}>
         <h2>About Us</h2>
@@ -62,50 +81,7 @@ const About = () => {
         <p style={{ margin: 0 }}>It is increasingly recognized as an important part of Sri Lanka&apos;s intangible cultural heritage.</p>
       </section>
 
-      <section className="card" style={{ marginBottom: '2rem' }}>
-        <h2>Martial Arts Masters</h2>
-        <div style={{ overflowX: 'auto' }}>
-          <table>
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Active Year</th>
-                <th>Location</th>
-              </tr>
-            </thead>
-            <tbody>
-              {masters.map((master, index) => (
-                <tr key={index}>
-                  <td>{master.name}</td>
-                  <td>{master.position}</td>
-                  <td>{master.year}</td>
-                  <td>{master.location}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <section className="card">
-        <h2>Location</h2>
-        <p><strong>Angampora Training Center</strong></p>
-        <p>123, Ancient Heritage Road,<br/>Cultural Triangle,<br/>Sri Lanka</p>
-        <div style={{
-          width: '100%', 
-          height: '300px', 
-          backgroundColor: '#e0d5c1', 
-          display: 'flex', 
-          alignItems: 'center', 
-          justifyContent: 'center',
-          borderRadius: '4px',
-          color: 'var(--text-muted)'
-        }}>
-          [Interactive Map Placeholder]
-        </div>
-      </section>
-
+    </div>
     </div>
   );
 };
