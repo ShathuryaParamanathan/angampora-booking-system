@@ -13,7 +13,7 @@ const Navbar = () => {
         <Link to="/" style={{ color: 'var(--primary)', fontWeight: 'bold', fontSize: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
         
          <img
-          src="/src/assets/images/logo.png"
+          src="/images/logo.png"
           alt="Angampora Logo"
           style={{ width: '50px', height: 'auto', marginRight: '0.5rem' }}
         /> 

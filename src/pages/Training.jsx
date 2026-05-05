@@ -6,22 +6,22 @@ const courses = [
     id: 1,
     title: 'Angam',
     description: 'Angam Unarmed combat utilizing parts of the human body, such as gataputtu (locks and grips) andpora haramba (strikes and blocks)',
-    image: '/src/assets/images/training1.png',
-    modalImage: '/src/assets/images/training1-detail.jpeg',
+    image: '/images/training1.png',
+    modalImage: '/images/training1-detail.jpeg',
   },
   {
     id: 2,
     title: 'Illangam',
     description: 'Using various types of arms and weaponry, comprising spears, swords, and sticks.',
-    image: '/src/assets/images/training2.png',
-    modalImage: '/src/assets/images/training2-detail.png',
+    image: '/images/training2.png',
+    modalImage: '/images/training2-detail.png',
   },
   {
     id: 3,
     title: 'Maya angam',
     description: 'Its most unique feature is the use of spells and incantations or spiritual power as a fighting technique.',
-    image: '/src/assets/images/training3.png',
-    modalImage: '/src/assets/images/training3-detail.png',
+    image: '/images/training3.png',
+    modalImage: '/images/training3-detail.png',
   },
 ];
 

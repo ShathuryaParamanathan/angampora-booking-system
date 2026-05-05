@@ -14,7 +14,7 @@ const Home = () => {
         alignItems: 'center',
         justifyContent: 'center',
         textAlign: 'center',
-        backgroundImage: 'linear-gradient(rgba(60, 50, 40, 0.62), rgba(30, 25, 20, 0.72)), url("/src/assets/images/homebackground.png")',
+        backgroundImage: 'linear-gradient(rgba(60, 50, 40, 0.62), rgba(30, 25, 20, 0.72)), url("/images/homebackground.png")',
         backgroundPosition: 'center top',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat'
