@@ -127,7 +127,7 @@ const ScheduleBooking = () => {
                       <div style={{ display: 'flex', gap: '1rem', fontSize: '0.9rem', color: 'var(--text-muted)', marginTop: '0.5rem' }}>
                         <span style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}><Calendar size={14} /> {new Date(slot.date).toLocaleDateString()} ({slot.time_slot})</span>
                         <span style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}><Users size={14} /> Capacity: {slot.capacity}</span>
-                        <span style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}><CreditCard size={14} /> Rs. 100</span>
+                      
                       </div>
                     </div>
                     <div style={{ textAlign: 'right' }}>
@@ -157,7 +157,6 @@ const ScheduleBooking = () => {
                 <div style={{ padding: '1rem', backgroundColor: '#e8f5e9', border: '1px solid #4CAF50', borderRadius: '4px', color: '#2e7d32', marginBottom: '1rem' }}>
                   <h4 style={{ margin: '0 0 0.5rem 0' }}>Success! ✅</h4>
                   <p style={{ margin: 0 }}>Your Booking ID is: <strong>{bookingStatus.id}</strong></p>
-                  <p style={{ margin: '0.5rem 0 0 0', fontSize: '0.85rem' }}>Fixed Fee: Rs. 100 (Pay at venue)</p>
                 </div>
               )}
 
@@ -167,7 +166,6 @@ const ScheduleBooking = () => {
                 <form onSubmit={handleSubmitBooking}>
                   <div style={{ marginBottom: '1rem', paddingBottom: '1rem', borderBottom: '1px solid var(--border)' }}>
                     <p style={{ margin: 0, fontSize: '0.9rem' }}><strong>Booking for:</strong> {selectedSlot.name}</p>
-                    <p style={{ margin: 0, fontSize: '0.9rem' }}><strong>Fee:</strong> Rs. 100.00</p>
                   </div>
 
                   {bookingStatus.error && <p style={{ color: 'var(--danger)', fontSize: '0.9rem' }}>{bookingStatus.error}</p>}

@@ -47,9 +47,52 @@ const About = () => {
 
       <section id="history" className="card" style={{ marginBottom: '2rem' }}>
         <h2>The Origin, Myths, Legends, and Historical Development of Angampora</h2>
-        <p style={{ color: 'var(--text-muted)', fontStyle: 'italic', marginBottom: '1.5rem' }}>
-          Sri Lanka, though a small island in the Indian Ocean, holds a deep and layered history of culture, belief systems, and indigenous knowledge. Among its most unique heritage practices is Angampora, a traditional martial art that blends combat science, spirituality, and cultural identity.
-        </p>
+  <div style={{
+  display: 'flex',
+  alignItems: 'center',
+  gap: '2rem',
+  flexWrap: 'wrap'
+}}>
+
+  {/* Text - 70% */}
+  <div style={{ flex: 7, minWidth: '280px' }}>
+    <p style={{ 
+      color: 'var(--text-muted)', 
+      fontStyle: 'italic', 
+      lineHeight: '1.7',
+      margin: 0
+    }}>
+      Sri Lanka, though a small island in the Indian Ocean, holds a deep and layered history of culture, belief systems, and indigenous knowledge. Among its most unique heritage practices is Angampora, a traditional martial art that blends combat science, spirituality, and cultural identity.
+    </p>
+  </div>
+
+  {/* Image - 30% */}
+  <div style={{ 
+    flex: 3,
+    minWidth: '200px',
+    display: 'flex',
+    justifyContent: 'center'
+  }}>
+    <img
+      src="/images/about-logo.jpeg"
+      alt="Angampora"
+      style={{ 
+        width: '100%',
+        maxWidth: '150px',
+        height: '200px',
+        objectFit: 'cover',
+        borderRadius: '10px'
+      }}
+      onError={(e) => {
+        e.target.style.display = 'none';
+        e.target.parentElement.innerHTML =
+          '<div style="display:flex;align-items:center;justify-content:center;height:180px;color:var(--text-muted)">[Image not found]</div>';
+      }}
+    />
+  </div>
+
+</div>
+           
 
         <h4 style={{ color: 'var(--primary)', marginTop: '1.5rem' }}>Mythological Origins</h4>
         <p>Angampora is strongly connected to Sri Lankan myth and Hindu epics, especially the legend of King Ravana. Ravana is described as a powerful warrior king, healer, and master of advanced combat systems. In many traditional beliefs, Angampora is considered one of his ancient warrior skills.</p>
