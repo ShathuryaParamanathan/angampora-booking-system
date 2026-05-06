@@ -20,7 +20,7 @@ const Navbar = () => {
           <img
             src="/images/logo.png"
             alt="Angampora Logo"
-            style={{ width: '50px', height: 'auto', marginRight: '0.5rem' }}
+            style={{ width: '70px', height: 'auto' }}
           />
           Angampora
         </Link>

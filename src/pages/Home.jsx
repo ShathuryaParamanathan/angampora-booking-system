@@ -20,32 +20,42 @@ const Home = () => {
         backgroundRepeat: 'no-repeat'
       }}>
         <div className="container">
-          <h1 style={{ color: 'var(--secondary)', fontSize: '3rem', margin: '0 0 1rem 0' }}>Discover Angampora</h1>
-          <div style={{ margin: '0 auto 1.5rem auto', display: 'inline-block' }}>
+             <div style={{ margin: '0 auto 0.5rem auto', display: 'inline-block' }}>
             <span style={{
-              background: 'linear-gradient(90deg, var(--secondary), #f5dfc0)',
-              color: 'var(--text-main)',
-              fontWeight: 700,
-              fontSize: '1.1rem',
+              // background: 'linear-gradient(90deg, var(--secondary), #f5dfc0)',
+              // color: 'var(--text-main)',
+              color: '#f5dfc0',
+              fontWeight: 600,
+              fontSize: '1.5rem',
               padding: '0.4rem 1.2rem',
               borderRadius: '2rem',
               letterSpacing: '0.02em',
               display: 'inline-block'
             }}>
-              From Mythical Kings to Living Martial Traditions
+             Discover Angampora
             </span>
           </div>
-          <p style={{ color: 'white', fontSize: '1.1rem', maxWidth: '600px', margin: '0 auto 2rem auto', opacity: 0.9 }}>
+          <div>
+<h1 style={{ color: 'var(--secondary)', fontSize: '3rem', margin: '0 0' }}>
+               From Mythical Kings to Living 
+          </h1>
+          <h1 style={{ color: 'var(--secondary)', fontSize: '3rem', margin: '0 0 1rem 0' }}>
+               Martial Traditions
+          </h1>
+          </div>
+          
+       
+          <p style={{ color: '#f5dfc0', fontSize: '1.1rem', maxWidth: '600px', margin: '0 auto 2rem auto', opacity: 0.9 }}>
             A traditional Sri Lankan martial art combining combat techniques, self-defense, and spiritual discipline.
           </p>
-          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' ,marginTop:'6rem'}}>
             <Link to="/book">
-              <button style={{ backgroundColor: 'var(--secondary)', color: 'var(--text-main)', fontSize: '1.1rem' }}>
+              <button style={{ backgroundColor: 'var(--secondary)', color: 'var(--text-main)', fontSize: '1.1rem',height:'3rem' }}>
                 Book Session Now
               </button>
             </Link>
             <Link to="/about">
-              <button style={{ backgroundColor: 'transparent', border: '2px solid var(--secondary)', color: 'var(--secondary)', fontSize: '1.1rem' }}>
+              <button style={{ backgroundColor: 'transparent', border: '1px solid var(--secondary)', color: 'var(--secondary)', fontSize: '1.1rem',height:'3rem' }}>
                 Learn More
               </button>
             </Link>

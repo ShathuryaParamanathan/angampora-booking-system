@@ -5,10 +5,10 @@ const About = () => {
     <div>
 
       {/* Hero Banner */}
-      <div style={{
+      {/* <div style={{
         width: '100%',
         height: '100vh',
-        backgroundImage: 'linear-gradient(rgba(30, 20, 10, 0.55), rgba(20, 15, 5, 0.70)), url("/images/about-bg.jpeg")',
+        backgroundImage: 'linear-gradient(rgba(30, 20, 10, 0.55), rgba(20, 15, 5, 0.70)), url("/images/about-bg1.jpeg")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -23,10 +23,9 @@ const About = () => {
             A living heritage — blending combat, spirituality, and Sri Lankan identity.
           </p>
         </div>
-      </div>
+      </div> */}
 
       <div className="container page-container">
-      {/* <h1>About Angampora</h1> */}
       
       <section id="about-us" className="card" style={{ marginBottom: '2rem' }}>
         <h2>About Us</h2>
@@ -97,10 +96,43 @@ const About = () => {
         <h4 style={{ color: 'var(--primary)', marginTop: '1.5rem' }}>Mythological Origins</h4>
         <p>Angampora is strongly connected to Sri Lankan myth and Hindu epics, especially the legend of King Ravana. Ravana is described as a powerful warrior king, healer, and master of advanced combat systems. In many traditional beliefs, Angampora is considered one of his ancient warrior skills.</p>
         <p>Over time, Ravana became a symbolic figure linking mythology with indigenous martial traditions, especially in contemporary cultural interpretations.</p>
-
-        <h4 style={{ color: 'var(--primary)' }}>Early Historical Background</h4>
+  <div style={{
+  display: 'flex',
+  alignItems: 'center',
+  gap: '2rem',
+  flexWrap: 'wrap'
+}}>
+  <div style={{ 
+    flex: 3,
+    minWidth: '200px',
+    display: 'flex',
+    justifyContent: 'center'
+  }}>
+ <img
+      src="/images/about-bg.jpeg"
+      alt="Angampora"
+      style={{ 
+        width: '100%',
+        maxWidth: '400px',
+        height: '200px',
+        objectFit: 'cover',
+        borderRadius: '10px'
+      }}
+      onError={(e) => {
+        e.target.style.display = 'none';
+        e.target.parentElement.innerHTML =
+          '<div style="display:flex;align-items:center;justify-content:center;height:180px;color:var(--text-muted)">[Image not found]</div>';
+      }}
+    />
+    </div>
+<div style={{ flex: 7, minWidth: '280px' }}>
+    <h4 style={{ color: 'var(--primary)' }}>Early Historical Background</h4>
         <p>Although myth shapes its identity, historical texts such as the Mahavamsa suggest that Sri Lanka had organized warrior systems from as early as the 2nd century BCE. Kings like Dutugemunu are recorded as leading powerful armies supported by highly skilled fighters trained in indigenous combat practices.</p>
         <p>These warriors were not only soldiers but also protectors of kingdoms, trained in both armed and unarmed combat techniques.</p>
+  </div>
+ 
+</div>
+      
 
         <h4 style={{ color: 'var(--primary)' }}>Development Through Kingdoms</h4>
         <p>Angampora developed significantly during the Anuradhapura, Polonnaruwa, Kotte, and Kandyan periods. By the Kandyan era, it had become a structured martial system, practiced in royal courts and specialized training schools (gurukulas).</p>
